@@ -37,7 +37,7 @@ class HomeController extends Controller
     }
 
 
-    public function category($slug)
+    public function type($slug)
     {
         $type = Type::firstWhere('slug', $slug);
 

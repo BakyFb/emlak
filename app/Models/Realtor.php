@@ -7,8 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Realtor extends Model
 {
-    /** @use HasFactory<\Database\Factories\RealtorFactory> */
-    use HasFactory;
+    protected $guarded = [
+        'id',
+    ];
 
     public $timestamps = false;
+
+
 }

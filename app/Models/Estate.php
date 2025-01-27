@@ -7,6 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Estate extends Model
 {
-    /** @use HasFactory<\Database\Factories\EstateFactory> */
-    use HasFactory;
+    protected $guarded = [
+        'id',
+    ];
+
+    public $timestamps = false;
+
+
+    /**
+     * @return HasMany
+     */
+    public function estate(): HasMany
+    {
+        return $this->hasMany(Estate::class);
+    }
 }
