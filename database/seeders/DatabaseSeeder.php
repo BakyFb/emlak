@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Estate;
+use App\Models\Location;
 use App\Models\Realtor;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
