@@ -9,4 +9,6 @@ class Realtor extends Model
 {
     /** @use HasFactory<\Database\Factories\RealtorFactory> */
     use HasFactory;
+
+    public $timestamps = false;
 }

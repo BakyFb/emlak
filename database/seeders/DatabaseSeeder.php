@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
             ->create();
 
         Location::factory()
-            ->count(1000)
+            ->count(100)
             ->create();
 
         User::factory()->create([

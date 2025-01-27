@@ -15,8 +15,9 @@ return new class extends Migration {
             $table->foreignId('user_id')->index()->constrained()->cascadeOnDelete();
             $table->foreignId('type_id')->index()->nullable()->constrained()->nullOnDelete();
             $table->unsignedBigInteger('price');
-            $table->string('description')->unique();
+            $table->text('description');
             $table->foreignId('realtor_id')->index()->nullable()->constrained()->nullOnDelete();
+            $table->timestamps();
         });
     }
 

@@ -2,23 +2,21 @@
 
 namespace Database\Factories;
 
-use App\Models\Estate;
+use App\Models\Realtor;
+use App\Models\Type;
+use App\Models\User;
 use Carbon\Factory;
 
 class EstateFactory extends Factory
 {
     public function definition(): array
     {
-        $estate = Estate::inRandomOrder()->first();
-
         return [
-            'user_id' => $user->id,
-            'type_id' => $type->id,
-            'price' => fake()->price(),
-            'slug' => str()->random(5),
+            'user_id' => User::inRandomOrder()->first()->id,
+            'type_id' => Type::inRandomOrder()->first()->id,
+            'price' => fake()->numberBetween(1, 1000),
             'description' => fake()->sentence(50, 100),
-            'views' => fake()->numberBetween(25, 50),
-            'favorites' => fake()->numberBetween(0, 25),
+            'realtor_id' => Realtor::inRandomOrder()->first()->id,
         ];
     }
 }
